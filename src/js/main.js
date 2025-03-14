@@ -1,10 +1,19 @@
 "use strict";
 
+import { createClient } from 'pexels';
+
 window.onload = () => {
     getWords();
-}
+}  
 
-async function getWords() {let url = 'https://wordsapiv1.p.rapidapi.com/words/inspire/synonyms';
+  async function getPhotos(data) {
+    const query = `${data}`;
+    const client = createClient('gD1EXTCq3YIuboCH8Jysz1cHQDtcvmITsdpWCJh4PVEJsQ84ntboHjbp');
+    client.photos.search({ query, per_page: 4 })
+    .then(photos => {console.log(photos)}) 
+  }
+
+async function getWords() {let url = 'https://wordsapiv1.p.rapidapi.com/words/image/synonyms';
 const options = {
 	method: 'GET',
 	headers: {
@@ -17,7 +26,8 @@ try {
 	const response = await fetch(url, options);
 	const result = await response.json();
     const synonyms = result.synonyms;
-    console.log(synonyms);
+    const synonym = result.synonyms.slice(0,1);
+    getPhotos(synonym);
     makeCloud(synonyms);
 } catch (error) {
 	console.error(error);
@@ -34,8 +44,8 @@ async function makeCloud(data) {fetch("https://textvis-word-cloud-v1.p.rapidapi.
     body: JSON.stringify({
       text: `${data}`,
       scale: 1,
-      width: 800,
-      height: 800,
+      width: 500,
+      height: 500,
       colors: ["#375E97", "#FB6542", "#FFBB00", "#3F681C"],
       font: "Tahoma",
       use_stopwords: true,
@@ -49,10 +59,11 @@ async function makeCloud(data) {fetch("https://textvis-word-cloud-v1.p.rapidapi.
     .then(wordCloud => {
       var img = document.getElementById("wordCloud");
       img.src = wordCloud;
-      img.height = 800;
-      img.width = 800;
+      img.height = 500;
+      img.width = 500;
     })
     .catch(err => {
       console.log(err);
     });
 }
+
