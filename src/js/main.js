@@ -1,16 +1,20 @@
 "use strict";
 
-import { createClient } from 'pexels';
-
 window.onload = () => {
     getWords();
 }  
 
   async function getPhotos(data) {
-    const query = `${data}`;
-    const client = createClient('gD1EXTCq3YIuboCH8Jysz1cHQDtcvmITsdpWCJh4PVEJsQ84ntboHjbp');
-    client.photos.search({ query, per_page: 4 })
-    .then(photos => {console.log(photos)}) 
+    let images = [];
+   await fetch(
+  `https://api.pexels.com/v1/search?query=${data}&orientation=landscape&per_page=4`,
+  {
+    headers: { 'Authorization': "gD1EXTCq3YIuboCH8Jysz1cHQDtcvmITsdpWCJh4PVEJsQ84ntboHjbp" }
+  }).then(result => result.json())
+  .then(json => {
+    images = json['photos']
+  });
+  console.log (images);
   }
 
 async function getWords() {let url = 'https://wordsapiv1.p.rapidapi.com/words/image/synonyms';
