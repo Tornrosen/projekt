@@ -33,7 +33,7 @@ function choseSummer() {
 function choseAutumn() {
     document.getElementById("body").style.backgroundColor ="blanchedAlmond";
     document.getElementById("header").style.backgroundColor = "goldenRod";
-    document.getElementById("footer").style.backgroundColor = "orange";
+    document.getElementById("footer").style.backgroundColor = "orangeRed";
     document.getElementById("body").style.color ="maroon";
     document.getElementById("footer").style.color = "oldLace";
     document.getElementById("header").style.color = "oldLace";

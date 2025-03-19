@@ -1,5 +1,31 @@
 "use strict";
 
+"use strict";
+//hämtar element
+
+let openBtn = document.getElementById("openMenu");
+
+let closeBtn = document.getElementById("closeMenu");
+
+//skapar händelselyssnare
+
+openBtn.addEventListener("click", toggleMenu);
+closeBtn.addEventListener("click", toggleMenu);
+
+//skapar funktion
+
+function toggleMenu() {
+    let navMenuEl = document.getElementById("navMenu");
+
+    let style = window.getComputedStyle(navMenuEl);
+
+    if (style.display === "none") {
+        navMenuEl.style.display = "block";
+    } else {
+        navMenuEl.style.display = "none";
+    }
+}
+
 window.onload = () => {
     getWords();
 }  
@@ -84,9 +110,9 @@ async function makeCloud(data) {fetch("https://textvis-word-cloud-v1.p.rapidapi.
     body: JSON.stringify({
       text: `${data}`,
       scale: 1,
-      width: 500,
-      height: 500,
-      colors: ["#375E97", "#FB6542", "#FFBB00", "#3F681C"],
+      width: 400,
+      height: 400,
+      colors: ["#0000CD", "#008000", "#FF8C00", "#8B0000", "#000000"],
       font: "Tahoma",
       use_stopwords: true,
       language: "en",
@@ -99,8 +125,8 @@ async function makeCloud(data) {fetch("https://textvis-word-cloud-v1.p.rapidapi.
     .then(wordCloud => {
       let img = document.getElementById("wordCloud");
       img.src = wordCloud;
-      img.height = 500;
-      img.width = 500;
+      img.height = 400;
+      img.width = 400;
     })
     .catch(err => {
       console.log(err);

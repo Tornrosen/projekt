@@ -1,13 +1,13 @@
 #flexCon {
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     margin: 1%;
 }
 
-#wordCloud {
-    width: fit-content;
-    margin-left: 30%;
-    margin-right: 30%;
+#flexCon2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #photoSpace {
@@ -15,3 +15,112 @@
     flex-wrap: wrap;
     justify-content:center;
 }
+
+#headMenu {
+    list-style-type: none;
+    font-size: 100%;
+    word-spacing: 0.1em;
+    width: 500px;
+
+    li {
+        display: inline-block;
+        padding: 1%;
+        margin: 1%;
+        width: 100px;
+
+        a:link, a:visited {
+            color: #F5FFFA;
+            text-decoration: none;
+            margin: 1%;
+           
+        }
+    }
+}
+
+#navMenu, .menuBtn {
+    display: none;
+}
+
+#flexCon1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    #headMenu {
+        display: none;
+    }
+    .menuBtn {
+        display: flex;
+        align-items: center;
+        padding: 8px 15px;
+        background-color: black;
+        border:#F5FFFA ridge;
+        color:#F5FFFA;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .open {
+        position: absolute;
+        top: 3%;
+        right: 5%;
+    }
+
+    .close {
+        position: absolute;
+        top: 50%;
+        right: 27%;
+    }
+
+    .bars {
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color:#F5FFFA;
+        margin: 5px 3px;
+    }
+
+    .cross1 {
+        width: 20px;
+        transform: rotate(45deg);
+        position: relative;
+        top: 5px;
+    }
+
+    .cross2 {
+        width: 20px;
+        transform: rotate(135deg);
+        position: relative;
+        top: -3px;
+    }
+
+    
+        #navMenu {
+        background-color:black;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 150px;
+        display: none;
+
+        ul {
+            list-style-type: none;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            font-size: 1em;
+            text-align: left;
+
+            li {
+                padding: 0.8em;
+                width: 100%;
+            }
+
+            a:link, a:visited {
+                color: #F5FFFA;
+                text-decoration: none;
+            }
+}}}

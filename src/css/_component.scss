@@ -1,0 +1,65 @@
+#spring {
+    position: absolute;
+    top: 43%;
+    left: 18.8%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF8DC;
+    height:fit-content;
+    width: fit-content;
+};
+
+#summer {
+position: absolute;
+top: 43%;
+left: 42%;
+transform: translate(-50%, -50%);
+background-color: #FFF8DC;
+height:fit-content;
+width: fit-content;
+};
+
+#autumn {
+position: absolute;
+top: 43%;
+left: 67.5%;
+transform: translate(-50%, -50%);
+background-color: #FFF8DC;
+height:fit-content;
+width: fit-content;
+};
+
+#winter {
+position: absolute;
+top: 43%;
+left: 91.7%;
+transform: translate(-50%, -50%);
+background-color: #FFF8DC;
+height:fit-content;
+width: fit-content;
+};
+
+#wordCloud {
+    position:absolute;
+    top: 145%;
+    left: 35%;
+    background-color:rgba(255, 248, 220, 0.9);
+    border-radius: 50%;
+}
+
+#pic1, #pic2, #pic3, #pic4 {
+    border-style: outset;
+    border-color: black;
+    border-radius: 0.2%;
+}
+
+#showBtn {
+    background-color: black;
+    color:#FFF8DC;
+    height: 50%;
+}
+
+#inputField {
+    margin: 1%;
+    border-style:groove;
+    border-radius: 0,2%;
+}
