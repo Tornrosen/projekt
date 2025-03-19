@@ -6,9 +6,10 @@
     <title>Startsida</title>
     <link rel="stylesheet" href="css/main.scss">
     <script src ="js/main.js" type="module"></script>
+    <script src ="js/seasons.js" type="module"></script>
 </head>
-<body>
-    <header><div id="flexCon1"><h1>Inspiration</h1>
+<body id="body">
+    <header id="header"><div id="flexCon1"><h1>Inspiration</h1>
     <button class="menuBtn open" id="openMenu">
         <span class="menuIcon">
         <span class="bars"></span>
@@ -64,10 +65,10 @@
         <h3>Skriv in ett engelskt ord!</h3>
         <input type="text" id="inputField"><button id="showBtn">Visa mig!</button>
         <h2>Bilder från Pexel</h2>
-        <div id="photoSpace"></div><p>Fotograf:</p><p class="photographer"></p>
+        <div id="photoSpace"></div>
         <img id="wordCloud"><p id="aside">Synonymer från WordsAPI, ordmoln från WordcloudAPI. Se länkar under Om mig.</p>
         
     </div>
-    <footer><p class="footerContent">Anna Danielsson, Webbutvecklingsprogrammet Mittuniversitetet</p></footer>  
+    <footer id="footer"><p class="footerContent">Anna Danielsson, Webbutvecklingsprogrammet Mittuniversitetet</p></footer>  
 </body>
 </html>

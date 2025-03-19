@@ -21,8 +21,7 @@ try {
 	const response = await fetch(url, options);
 	const result = await response.json();
     const synonyms = result.synonyms;
-    const synonym = result.synonyms.slice(0,1);
-    getPhotos(synonym);
+    getPhotos(chosenWord);
     makeCloud(synonyms);
 } catch (error) {
 	console.error(error);
@@ -50,10 +49,8 @@ try {
       imageEl.src = image.src.original;
       imageEl.height = 400;
       imageEl.width = 600;
-      console.log (photoSpaceEl);
       photoSpaceEl.appendChild(imageEl);
     });
-      console.log(images);
   }
 
 async function getWords() {let url = 'https://wordsapiv1.p.rapidapi.com/words/light/synonyms';
