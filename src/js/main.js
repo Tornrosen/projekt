@@ -4,6 +4,31 @@ window.onload = () => {
     getWords();
 }  
 
+let showBtnEl = document.getElementById("showBtn");
+showBtnEl.addEventListener("click", chooseWord);
+
+async function chooseWord() {
+  let chosenWord = document.querySelector("#inputField").value;
+  let url = `https://wordsapiv1.p.rapidapi.com/words/${chosenWord}/synonyms`;
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': '4147a18a71msh780f3ba99ed6a57p11d9c0jsn4e61f3a1fe94',
+		'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com'
+	}
+};
+try {
+	const response = await fetch(url, options);
+	const result = await response.json();
+    const synonyms = result.synonyms;
+    const synonym = result.synonyms.slice(0,1);
+    getPhotos(synonym);
+    makeCloud(synonyms);
+} catch (error) {
+	console.error(error);
+}
+}
+
   async function getPhotos(data) {
     let images = [];
    await fetch(
@@ -14,10 +39,24 @@ window.onload = () => {
   .then(json => {
     images = json['photos']
   });
-  console.log (images);
+  showImages(images);
   }
 
-async function getWords() {let url = 'https://wordsapiv1.p.rapidapi.com/words/image/synonyms';
+  async function showImages(images) {
+    let photoSpaceEl = document.getElementById("photoSpace");
+    photoSpaceEl.innerHTML ="";
+    images.forEach(image => {
+      let imageEl = document.createElement ("img");
+      imageEl.src = image.src.original;
+      imageEl.height = 400;
+      imageEl.width = 600;
+      console.log (photoSpaceEl);
+      photoSpaceEl.appendChild(imageEl);
+    });
+      console.log(images);
+  }
+
+async function getWords() {let url = 'https://wordsapiv1.p.rapidapi.com/words/light/synonyms';
 const options = {
 	method: 'GET',
 	headers: {
@@ -61,7 +100,7 @@ async function makeCloud(data) {fetch("https://textvis-word-cloud-v1.p.rapidapi.
       return response.text();
     })
     .then(wordCloud => {
-      var img = document.getElementById("wordCloud");
+      let img = document.getElementById("wordCloud");
       img.src = wordCloud;
       img.height = 500;
       img.width = 500;
