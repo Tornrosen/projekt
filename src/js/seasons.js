@@ -12,6 +12,13 @@ autumnEl.addEventListener("click", choseAutumn);
 let winterEl = document.getElementById("pic4");
 winterEl.addEventListener("click", choseWinter);
 
+/**
+ * byter färg vid klick
+ * 
+ * function choseSpring
+ * @param {}
+ * @returns void
+ */
 function choseSpring() {
     document.getElementById("body").style.backgroundColor ="pink";
     document.getElementById("header").style.backgroundColor = "cornflowerBlue";
@@ -21,6 +28,13 @@ function choseSpring() {
     document.getElementById("header").style.color = "pink";
 }
 
+/**
+ * byter färg vid klick
+ * 
+ * function choseSummer
+ * @param {}
+ * @returns void
+ */
 function choseSummer() {
     document.getElementById("body").style.backgroundColor ="honeyDew";
     document.getElementById("header").style.backgroundColor = "dodgerBlue";
@@ -30,6 +44,13 @@ function choseSummer() {
     document.getElementById("header").style.color = "yellow";
 }
 
+/**
+ * byter färg vid klick
+ * 
+ * function choseAutumn
+ * @param {}
+ * @returns void
+ */
 function choseAutumn() {
     document.getElementById("body").style.backgroundColor ="blanchedAlmond";
     document.getElementById("header").style.backgroundColor = "goldenRod";
@@ -39,6 +60,13 @@ function choseAutumn() {
     document.getElementById("header").style.color = "oldLace";
 }
 
+/**
+ * byter färg vid klick
+ * 
+ * function choseWinter
+ * @param {}
+ * @returns void
+ */
 function choseWinter() {
     document.getElementById("body").style.backgroundColor ="azure";
     document.getElementById("header").style.backgroundColor = "darkSlateGrey";
