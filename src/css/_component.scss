@@ -1,42 +1,3 @@
-#spring {
-    position: absolute;
-    top: 43%;
-    left: 18.8%;
-    transform: translate(-50%, -50%);
-    background-color: #FFF8DC;
-    height:fit-content;
-    width: fit-content;
-};
-
-#summer {
-position: absolute;
-top: 43%;
-left: 42%;
-transform: translate(-50%, -50%);
-background-color: #FFF8DC;
-height:fit-content;
-width: fit-content;
-};
-
-#autumn {
-position: absolute;
-top: 43%;
-left: 67.5%;
-transform: translate(-50%, -50%);
-background-color: #FFF8DC;
-height:fit-content;
-width: fit-content;
-};
-
-#winter {
-position: absolute;
-top: 43%;
-left: 91.7%;
-transform: translate(-50%, -50%);
-background-color: #FFF8DC;
-height:fit-content;
-width: fit-content;
-};
 
 #wordCloud {
     position:absolute;
@@ -46,10 +7,22 @@ width: fit-content;
     border-radius: 50%;
 }
 
+#inspiration:hover {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-clip: text;
+    color: transparent;
+}
+
 #pic1, #pic2, #pic3, #pic4 {
     border-style: outset;
     border-color: black;
     border-radius: 0.2%;
+}
+
+#pic1:hover, #pic2:hover, #pic3:hover, #pic4:hover {
+    cursor: pointer;
+    filter: grayscale(100%);
+    border-color:#FFF8DC;
 }
 
 #showBtn {
