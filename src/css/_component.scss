@@ -1,10 +1,50 @@
 
 #wordCloud {
     position:absolute;
-    top: 145%;
+    top: 155%;
     left: 35%;
     background-color:rgba(255, 248, 220, 0.9);
     border-radius: 50%;
+}
+
+
+#aboutText {
+    max-width: 40ch;
+    line-height: 1.2em;
+    font-size: 130%;
+    background-color:rgba(255, 248, 220, 0.7);
+    border-radius: 2%;
+    border-style:outset;
+    border-color:black;
+    text-align: left;
+    padding: 2%;
+}
+
+#aboutHeader {
+    background-color:rgba(255, 248, 220, 0.7);
+    border-radius: 2%;
+    border-style:outset;
+    border-color:black;
+    padding: 1%;
+    width: fit-content;
+}
+
+#glint {
+    position: absolute;
+    top: 9%;
+    left: 27.8%;
+}
+
+#glitter {
+    position: absolute;
+    top: 13.7%;
+    left: 35%;
+}
+
+#logo {
+    position: absolute;
+    top: 6.3%;
+    left: 10%;
 }
 
 #inspiration:hover {

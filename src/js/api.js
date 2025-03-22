@@ -125,8 +125,8 @@ async function makeCloud(data) {
     body: JSON.stringify({
       text: `${data}`,
       scale: 1,
-      width: 400,
-      height: 400,
+      width: 350,
+      height: 350,
       colors: ["#0000CD", "#008000", "#FF8C00", "#8B0000", "#000000"],
       font: "Tahoma",
       use_stopwords: true,
@@ -140,8 +140,8 @@ async function makeCloud(data) {
     .then(wordCloud => {
       let img = document.getElementById("wordCloud");
       img.src = wordCloud;
-      img.height = 400;
-      img.width = 400;
+      img.height = 350;
+      img.width = 350;
     })
     .catch(err => {
       console.log(err);
