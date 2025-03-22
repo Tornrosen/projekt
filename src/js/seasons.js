@@ -20,10 +20,10 @@ winterEl.addEventListener("click", choseWinter);
  * @returns void
  */
 function choseSpring() {
-    document.getElementById("body").style.backgroundColor ="pink";
+    document.getElementById("body").style.backgroundColor = "pink";
     document.getElementById("header").style.backgroundColor = "cornflowerBlue";
     document.getElementById("footer").style.backgroundColor = "hotPink";
-    document.getElementById("body").style.color ="seaGreen";
+    document.getElementById("body").style.color = "seaGreen";
     document.getElementById("footer").style.color = "pink";
     document.getElementById("header").style.color = "pink";
     document.getElementById("openMenu").style.backgroundColor = "cornflowerBlue";
@@ -40,10 +40,10 @@ function choseSpring() {
  * @returns void
  */
 function choseSummer() {
-    document.getElementById("body").style.backgroundColor ="honeyDew";
+    document.getElementById("body").style.backgroundColor = "honeyDew";
     document.getElementById("header").style.backgroundColor = "dodgerBlue";
     document.getElementById("footer").style.backgroundColor = "darkGreen";
-    document.getElementById("body").style.color ="brown";
+    document.getElementById("body").style.color = "brown";
     document.getElementById("footer").style.color = "yellow";
     document.getElementById("header").style.color = "yellow";
     document.getElementById("openMenu").style.backgroundColor = "dodgerBlue";
@@ -60,10 +60,10 @@ function choseSummer() {
  * @returns void
  */
 function choseAutumn() {
-    document.getElementById("body").style.backgroundColor ="blanchedAlmond";
+    document.getElementById("body").style.backgroundColor = "blanchedAlmond";
     document.getElementById("header").style.backgroundColor = "goldenRod";
     document.getElementById("footer").style.backgroundColor = "orangeRed";
-    document.getElementById("body").style.color ="maroon";
+    document.getElementById("body").style.color = "maroon";
     document.getElementById("footer").style.color = "oldLace";
     document.getElementById("header").style.color = "oldLace";
     document.getElementById("openMenu").style.backgroundColor = "goldenRod";
@@ -80,10 +80,10 @@ function choseAutumn() {
  * @returns void
  */
 function choseWinter() {
-    document.getElementById("body").style.backgroundColor ="azure";
+    document.getElementById("body").style.backgroundColor = "azure";
     document.getElementById("header").style.backgroundColor = "darkSlateGrey";
     document.getElementById("footer").style.backgroundColor = "midnightBlue";
-    document.getElementById("body").style.color ="black";
+    document.getElementById("body").style.color = "black";
     document.getElementById("footer").style.color = "white";
     document.getElementById("header").style.color = "white";
     document.getElementById("openMenu").style.backgroundColor = "darkSlateGrey";

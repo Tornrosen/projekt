@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lite inspiration är aldrig fel.">
     <title>Startsida</title>
     <link rel="stylesheet" href="css/main.scss">
-    <script src ="js/main.js" type="module"></script>
-    <script src ="js/seasons.js" type="module"></script>
-    <script src ="js/api.js" type ="module"></script>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/seasons.js" type="module"></script>
+    <script src="js/api.js" type="module"></script>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
+
 <body id="body">
-    <header id="header"><div id="flexCon1"><a href="index.html"><img src="images/logo.svg" id="logo" width="80" height="80"
-        alt=""></a><img src="images/glint.svg" id="glint" width="35" height="35" alt=""><h1 id="inspiration">Inspiration</h1>
-        <img src="images/glitter.svg" id="glitter" width="40" height="40" alt="">
-    <button class="menuBtn open" id="openMenu">
-        <span class="menuIcon">
-        <span class="bars"></span>
-        <span class="bars"></span>
-        <span class="bars"></span></span>
-        <span class="menuText">Meny</span>
-    </button>
-    <nav id="navMenu">
-        <ul>
-            <li><a href="index.html">Startsida</a></li>
-            <li><a href="about.html">Om webbplatsen</a></li>
-        </ul>
-        <button class="menuBtn close" id="closeMenu">
-            <span class="menuIcon">
-                <span class="bars cross1"></span>
-                <span class="bars cross2"></span>
-            </span>
-            <span class="menuText">Stäng</span>
-        </button>
-    </nav>
-    <nav id="headMenu">
-        <ul>
-            <li class="menuItem"><a href="index.html">Startsida</a></li>
-            <li class="menuItem"><a href="about.html">Om webbplatsen</a></li>
-        </ul>
-    </nav>
-    </div></header>
-    <h2>Välj ett tema!</h2>
+    <header id="header">
+        <div id="flexCon1"><a href="index.html"><img src="images/logo.svg" id="logo" width="80" height="80"
+                    alt=""></a><img src="images/glint.svg" id="glint" width="35" height="35" alt="">
+            <h1 id="inspiration">Inspiration</h1>
+            <img src="images/glitter.svg" id="glitter" width="40" height="40" alt="">
+            <button class="menuBtn open" id="openMenu">
+                <span class="menuIcon">
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span></span>
+                <span class="menuText">Meny</span>
+            </button>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="about.html">Om webbplatsen</a></li>
+                </ul>
+                <button class="menuBtn close" id="closeMenu">
+                    <span class="menuIcon">
+                        <span class="bars cross1"></span>
+                        <span class="bars cross2"></span>
+                    </span>
+                    <span class="menuText">Stäng</span>
+                </button>
+            </nav>
+            <nav id="headMenu">
+                <ul>
+                    <li class="menuItem"><a href="index.html">Startsida</a></li>
+                    <li class="menuItem"><a href="about.html">Om webbplatsen</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h3>Välj ett tema!</h3>
     <div id="flexCon">
         <picture>
             <source srcset="images/spring.jpg?as=webp&width=200" type="image/webp">
             <img src="images/spring.jpg?width=200" alt="" id="pic1">
-        </picture> 
+        </picture>
         <picture>
             <source srcset="images/summer.jpg?as=webp&width=200" type="image/webp">
             <img src="images/summer.jpg?width=200" alt="" id="pic2">
-        </picture> 
+        </picture>
         <picture>
             <source srcset="images/autumn.jpg?as=webp&width=200" type="image/webp">
             <img src="images/autumn.jpg?width=200" alt="" id="pic3">
-        </picture> 
+        </picture>
         <picture>
             <source srcset="images/winter.jpg?as=webp&width=200" type="image/webp">
             <img src="images/winter.jpg?width=200" alt="" id="pic4">
-        </picture> 
+        </picture>
     </div><br>
-        <h3>Skriv in ett engelskt ord!</h3> <img src="images/star.svg" id="star" width="35" height="35" alt="">
-       <div id="flexCon2"> <input type="text" id="inputField"><button id="showBtn">Visa mig!</button> </div>
-       <div id="cloudCon"><img id="wordCloud"></div>
-        <h2>Bilder från Pexels</h2>
-        <div id="photoSpace"></div>
-        <p id="aside">Synonymer från WordsAPI, ordmoln från WordcloudAPI. Se länkar under Om mig.</p>
-    <footer id="footer"><p class="footerContent">Anna Danielsson, Webbutvecklingsprogrammet Mittuniversitetet</p></footer>  
+    <h2>Skriv in ett engelskt ord!</h2> <img src="images/star.svg" id="star" width="35" height="35" alt="">
+    <div id="flexCon2"> <input type="text" id="inputField"><button id="showBtn">Visa mig!</button> </div>
+    <div id="cloudCon"><img id="wordCloud"></div>
+    <h2>Bilder från Pexels</h2>
+    <div id="photoSpace"></div>
+    <p id="aside">Synonymer från WordsAPI, ordmoln från WordcloudAPI. Se länkar under Om mig.</p>
+    <footer id="footer">
+        <p class="footerContent">Anna Danielsson, Webbutvecklingsprogrammet Mittuniversitetet</p>
+    </footer>
 </body>
+
 </html>

@@ -1,8 +1,8 @@
 "use strict";
 
 window.onload = () => {
-    getWords();
-}  
+  getWords();
+}
 
 let showBtnEl = document.getElementById("showBtn");
 showBtnEl.addEventListener("click", chooseWord);
@@ -16,25 +16,26 @@ showBtnEl.addEventListener("click", chooseWord);
  * @return void
  */
 async function getWords() {
-    let url = 'https://wordsapiv1.p.rapidapi.com/words/light/synonyms';
-    let options = {
-      method: 'GET',
-      headers: {
-          'x-rapidapi-key': '4147a18a71msh780f3ba99ed6a57p11d9c0jsn4e61f3a1fe94',
-          'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com'
-      }
+  let url = 'https://wordsapiv1.p.rapidapi.com/words/light/synonyms';
+  let options = {
+    method: 'GET',
+    headers: {
+      'x-rapidapi-key': '4147a18a71msh780f3ba99ed6a57p11d9c0jsn4e61f3a1fe94',
+      'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com'
+    }
   };
-  
+
   try {
-      let response = await fetch(url, options);
-      let result = await response.json();
+    let response = await fetch(url, options);
+    let result = await response.json();
     let synonyms = result.synonyms;
-    let synonym = result.synonyms.slice(0,1);
-      getPhotos(synonym);
-      makeCloud(synonyms);
+    let synonym = result.synonyms.slice(0, 1);
+    getPhotos(synonym);
+    makeCloud(synonyms);
   } catch (error) {
-      console.error(error);
-  }}
+    console.error(error);
+  }
+}
 
 /**
  * hämtar synonym från API till ord som skrivits i sökfält
@@ -48,21 +49,21 @@ async function chooseWord() {
   let chosenWord = document.querySelector("#inputField").value;
   let url = `https://wordsapiv1.p.rapidapi.com/words/${chosenWord}/synonyms`;
   let options = {
-	method: 'GET',
-	headers: {
-		'x-rapidapi-key': '4147a18a71msh780f3ba99ed6a57p11d9c0jsn4e61f3a1fe94',
-		'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com'
-	}
-};
-try {
-	let response = await fetch(url, options);
-	let result = await response.json();
-  let synonyms = result.synonyms;
-  getPhotos(chosenWord);
-  makeCloud(synonyms);
-} catch (error) {
-	console.error(error);
-}
+    method: 'GET',
+    headers: {
+      'x-rapidapi-key': '4147a18a71msh780f3ba99ed6a57p11d9c0jsn4e61f3a1fe94',
+      'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com'
+    }
+  };
+  try {
+    let response = await fetch(url, options);
+    let result = await response.json();
+    let synonyms = result.synonyms;
+    getPhotos(chosenWord);
+    makeCloud(synonyms);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 /**
@@ -71,40 +72,40 @@ try {
  * @param {array} data 
  * @return void
  */
-  async function getPhotos(data) {
-    let images = [];
-   await fetch(`https://api.pexels.com/v1/search?query=${data}&orientation=landscape&per_page=4`,
-  {
-    headers: { 'Authorization': "gD1EXTCq3YIuboCH8Jysz1cHQDtcvmITsdpWCJh4PVEJsQ84ntboHjbp" }
-  })
-  .then(result => result.json())
-  .then(json => {
-    images = json['photos']
-  });
-  showImages(images);
-  }
-
-  /**
-   * skriver ut bilderna med title (fotografnamn) och alt-text
-   * 
-   * function showImages
-   * @param {array} images 
-   * @return void
-   */
-
-  async function showImages(images) {
-    let photoSpaceEl = document.getElementById("photoSpace");
-    photoSpaceEl.innerHTML ="";
-    images.forEach(image => {
-      let imageEl = document.createElement ("img");
-      imageEl.src = image.src.original;
-      imageEl.height = 400;
-      imageEl.width = 600;
-      photoSpaceEl.appendChild(imageEl);
-      imageEl.title = image.photographer;
-      imageEl.alt = image.alt;
+async function getPhotos(data) {
+  let images = [];
+  await fetch(`https://api.pexels.com/v1/search?query=${data}&orientation=landscape&per_page=4`,
+    {
+      headers: { 'Authorization': "gD1EXTCq3YIuboCH8Jysz1cHQDtcvmITsdpWCJh4PVEJsQ84ntboHjbp" }
+    })
+    .then(result => result.json())
+    .then(json => {
+      images = json['photos']
     });
-  }
+  showImages(images);
+}
+
+/**
+ * skriver ut bilderna med title (fotografnamn) och alt-text
+ * 
+ * function showImages
+ * @param {array} images 
+ * @return void
+ */
+
+async function showImages(images) {
+  let photoSpaceEl = document.getElementById("photoSpace");
+  photoSpaceEl.innerHTML = "";
+  images.forEach(image => {
+    let imageEl = document.createElement("img");
+    imageEl.src = image.src.original;
+    imageEl.height = 400;
+    imageEl.width = 600;
+    photoSpaceEl.appendChild(imageEl);
+    imageEl.title = image.photographer;
+    imageEl.alt = image.alt;
+  });
+}
 
 /**
  * hämtar ett ordmoln från ett API och skriver ut detta till webbplatsen
@@ -114,26 +115,27 @@ try {
  * @return void
  */
 async function makeCloud(data) {
-  fetch("https://textvis-word-cloud-v1.p.rapidapi.com/v1/textToCloud", 
-    {method: "POST",
-    headers: {
-      "x-rapidapi-host": "textvis-word-cloud-v1.p.rapidapi.com",
-      "x-rapidapi-key": "4147a18a71msh780f3ba99ed6a57p11d9c0jsn4e61f3a1fe94",
-      "content-type": "application/json",
-      accept: "application/json"
-    },
-    body: JSON.stringify({
-      text: `${data}`,
-      scale: 1,
-      width: 350,
-      height: 350,
-      colors: ["#0000CD", "#008000", "#FF8C00", "#8B0000", "#000000"],
-      font: "Tahoma",
-      use_stopwords: true,
-      language: "en",
-      uppercase: false
+  fetch("https://textvis-word-cloud-v1.p.rapidapi.com/v1/textToCloud",
+    {
+      method: "POST",
+      headers: {
+        "x-rapidapi-host": "textvis-word-cloud-v1.p.rapidapi.com",
+        "x-rapidapi-key": "4147a18a71msh780f3ba99ed6a57p11d9c0jsn4e61f3a1fe94",
+        "content-type": "application/json",
+        accept: "application/json"
+      },
+      body: JSON.stringify({
+        text: `${data}`,
+        scale: 1,
+        width: 350,
+        height: 350,
+        colors: ["#0000CD", "#008000", "#FF8C00", "#8B0000", "#000000"],
+        font: "Tahoma",
+        use_stopwords: true,
+        language: "en",
+        uppercase: false
+      })
     })
-  })
     .then(response => {
       return response.text();
     })
