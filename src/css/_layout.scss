@@ -83,7 +83,7 @@
         justify-content: center;
         align-items: center;
     }
-    #glitter, #glint {
+    #glitter, #glint, #star {
         display: none;
     }
     #logo {
@@ -140,7 +140,11 @@
     
         #navMenu {
         background-color:#4B0082;
+        border-style:double;
+        border-color: black;
+        border-width: 10px;
         position: absolute;
+        z-index: 1;
         right: 0;
         top: 0;
         height: 100vh;
@@ -167,7 +171,10 @@
 }}}
 
 @media screen and (max-width: 720px) {
-    
+    #pic1, #pic2, #pic3, #pic4 {
+        width: 100px;
+        height: auto;
+    }
     h1 {
         margin: 3%;
         font-size: 170%;

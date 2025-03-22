@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: seasons.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: seasons.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+
+let springEl = document.getElementById("pic1");
+springEl.addEventListener("click", choseSpring);
+
+let summerEl = document.getElementById("pic2");
+summerEl.addEventListener("click", choseSummer);
+
+let autumnEl = document.getElementById("pic3");
+autumnEl.addEventListener("click", choseAutumn);
+
+let winterEl = document.getElementById("pic4");
+winterEl.addEventListener("click", choseWinter);
+
+/**
+ * byter färg vid klick
+ * 
+ * function choseSpring
+ * @param {}
+ * @returns void
+ */
+function choseSpring() {
+    document.getElementById("body").style.backgroundColor ="pink";
+    document.getElementById("header").style.backgroundColor = "cornflowerBlue";
+    document.getElementById("footer").style.backgroundColor = "hotPink";
+    document.getElementById("body").style.color ="seaGreen";
+    document.getElementById("footer").style.color = "pink";
+    document.getElementById("header").style.color = "pink";
+    document.getElementById("openMenu").style.backgroundColor = "cornflowerBlue";
+    document.getElementById("closeMenu").style.backgroundColor = "cornflowerBlue";
+    document.getElementById("navMenu").style.backgroundColor = "cornflowerBlue";
+    document.getElementById("navMenu").style.color = "pink";
+}
+
+/**
+ * byter färg vid klick
+ * 
+ * function choseSummer
+ * @param {}
+ * @returns void
+ */
+function choseSummer() {
+    document.getElementById("body").style.backgroundColor ="honeyDew";
+    document.getElementById("header").style.backgroundColor = "dodgerBlue";
+    document.getElementById("footer").style.backgroundColor = "darkGreen";
+    document.getElementById("body").style.color ="brown";
+    document.getElementById("footer").style.color = "yellow";
+    document.getElementById("header").style.color = "yellow";
+    document.getElementById("openMenu").style.backgroundColor = "dodgerBlue";
+    document.getElementById("closeMenu").style.backgroundColor = "dodgerBlue";
+    document.getElementById("navMenu").style.backgroundColor = "dodgerBlue";
+    document.getElementById("navMenu").style.color = "yellow";
+}
+
+/**
+ * byter färg vid klick
+ * 
+ * function choseAutumn
+ * @param {}
+ * @returns void
+ */
+function choseAutumn() {
+    document.getElementById("body").style.backgroundColor ="blanchedAlmond";
+    document.getElementById("header").style.backgroundColor = "goldenRod";
+    document.getElementById("footer").style.backgroundColor = "orangeRed";
+    document.getElementById("body").style.color ="maroon";
+    document.getElementById("footer").style.color = "oldLace";
+    document.getElementById("header").style.color = "oldLace";
+    document.getElementById("openMenu").style.backgroundColor = "goldenRod";
+    document.getElementById("closeMenu").style.backgroundColor = "goldenRod";
+    document.getElementById("navMenu").style.backgroundColor = "goldenRod";
+    document.getElementById("navMenu").style.color = "oldLace";
+}
+
+/**
+ * byter färg vid klick
+ * 
+ * function choseWinter
+ * @param {}
+ * @returns void
+ */
+function choseWinter() {
+    document.getElementById("body").style.backgroundColor ="azure";
+    document.getElementById("header").style.backgroundColor = "darkSlateGrey";
+    document.getElementById("footer").style.backgroundColor = "midnightBlue";
+    document.getElementById("body").style.color ="black";
+    document.getElementById("footer").style.color = "white";
+    document.getElementById("header").style.color = "white";
+    document.getElementById("openMenu").style.backgroundColor = "darkSlateGrey";
+    document.getElementById("closeMenu").style.backgroundColor = "darkSlateGrey";
+    document.getElementById("navMenu").style.backgroundColor = "darkSlateGrey";
+    document.getElementById("navMenu").style.color = "white";
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#chooseWord">chooseWord</a></li><li><a href="global.html#choseAutumn">choseAutumn</a></li><li><a href="global.html#choseSpring">choseSpring</a></li><li><a href="global.html#choseSummer">choseSummer</a></li><li><a href="global.html#choseWinter">choseWinter</a></li><li><a href="global.html#getPhotos">getPhotos</a></li><li><a href="global.html#getWords">getWords</a></li><li><a href="global.html#makeCloud">makeCloud</a></li><li><a href="global.html#showImages">showImages</a></li><li><a href="global.html#toggleMenu">toggleMenu</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Sat Mar 22 2025 15:45:47 GMT+0100 (centraleuropeisk normaltid)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

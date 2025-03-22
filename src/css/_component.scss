@@ -3,12 +3,12 @@
     position:absolute;
     top: 155%;
     left: 35%;
-    background-color:rgba(255, 248, 220, 0.9);
+    background-color:rgba(255, 248, 220, 0.7);
     border-radius: 50%;
 }
 
 
-#aboutText {
+#aboutText, #linkText {
     max-width: 40ch;
     line-height: 1.2em;
     font-size: 130%;
@@ -17,10 +17,10 @@
     border-style:outset;
     border-color:black;
     text-align: left;
-    padding: 2%;
+    padding: 1%;
 }
 
-#aboutHeader {
+#aboutHeading {
     background-color:rgba(255, 248, 220, 0.7);
     border-radius: 2%;
     border-style:outset;
@@ -39,6 +39,12 @@
     position: absolute;
     top: 13.7%;
     left: 35%;
+}
+
+#star {
+    position: absolute;
+    top: 81%;
+    left: 58%;
 }
 
 #logo {
@@ -68,7 +74,8 @@
 #showBtn {
     background-color: black;
     color:#FFF8DC;
-    height: 50%;
+    height: 30px;
+    border-radius: 5px;
 }
 
 #inputField {

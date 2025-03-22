@@ -1,0 +1,102 @@
+@keyframes spinningWheel {
+    0% {
+        transform:rotate(0deg)
+    }
+    100% {
+        transform:rotate(360deg)
+    }
+}
+
+#logo:hover {
+    animation-name: spinningWheel;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+#glitter:hover, #glint:hover {
+    transform:scale(1.5,1.5)
+}
+
+@keyframes happyBtn {
+    0% {
+        background-color: red;
+    }
+    20% {
+        background-color: orange;
+    }
+    40% {
+        background-color: yellow;
+    }
+    60% {
+        background-color: green;
+    }
+    70% {
+        background-color: blue;
+    }
+    80% {
+        background-color: indigo;
+    }
+    90% {
+        background-color: violet;
+    }
+    100% {
+        background-color: pink;
+    }
+}
+#showBtn:hover {
+    animation-name: happyBtn;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#showBtn:active {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    transform:scale(1.3,1.3)
+}
+
+#inputField:active {
+    transform:scale(1.1,1.4)
+}
+
+#star {
+    animation-name: littleStar;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes littleStar {
+    0% {
+        transform:rotate(0deg)
+    }
+    100% {
+        opacity:0;
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes scrollingText {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  #scrollCon {
+    border: 5px outset black;
+    border-radius: 2%;
+    height: 200px;
+    overflow: hidden;
+  } 
+
+#aboutText { 
+    transform: translateY(100%);
+    animation: scrollingText 17s linear infinite;
+}
+
+
