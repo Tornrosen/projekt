@@ -112,7 +112,7 @@ async function showImages(images) {
  * 
  * function makeCloud
  * @param {array} data 
- * @return void
+ * @return response.text
  */
 async function makeCloud(data) {
   fetch("https://textvis-word-cloud-v1.p.rapidapi.com/v1/textToCloud",
