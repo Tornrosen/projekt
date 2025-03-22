@@ -17,6 +17,7 @@
     "sharp": "^0.33.5"
   },
   "dependencies": {
-    "pexels": "^1.4.0"
+    "pexels": "^1.4.0",
+    "svgo": "^3.3.2"
   }
 }
