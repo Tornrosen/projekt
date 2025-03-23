@@ -144,6 +144,7 @@ async function makeCloud(data) {
       img.src = wordCloud;
       img.height = 350;
       img.width = 350;
+      img.alt = "Ordmoln med synonymer";
     })
     .catch(err => {
       console.log(err);
